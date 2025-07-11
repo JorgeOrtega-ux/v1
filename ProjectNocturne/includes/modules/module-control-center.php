@@ -21,12 +21,12 @@
                         <span data-translate="help_and_resources" data-translate-category="menu"></span>
                     </div>
                 </div>
-                <div class="menu-link" data-action="suggest-improvements">
+                <div class="menu-link" data-action="submit-feedback">
                     <div class="menu-link-icon">
-                        <span class="material-symbols-rounded">emoji_objects</span>
+                        <span class="material-symbols-rounded">feedback</span>
                     </div>
                     <div class="menu-link-text">
-                        <span data-translate="suggest_improvements" data-translate-category="menu"></span>
+                        <span data-translate="submit_feedback" data-translate-category="menu"></span>
                     </div>
                 </div>
             </div>

@@ -468,10 +468,10 @@ function setupEventListeners() {
     setupMutationObserver();
 
     document.addEventListener(EVENT_NAMES.CLICK, (e) => {
-        const suggestButton = e.target.closest('[data-action="suggest-improvements"]');
-        if (suggestButton) {
+        const feedbackButton = e.target.closest('[data-action="submit-feedback"]');
+        if (feedbackButton) {
             e.preventDefault();
-            activateModule('toggleSuggestionMenu');
+            activateModule('toggleFeedbackMenu');
         }
     });
 

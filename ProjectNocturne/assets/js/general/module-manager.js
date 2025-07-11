@@ -58,8 +58,8 @@ const INDEPENDENT_OVERLAYS = {
     'menuPaletteColors': '[data-menu="paletteColors"]',
     'menuSounds': '[data-menu="sounds"]',
     'menuDelete': '[data-menu="delete"]',
-    'menuSuggestions': '[data-menu="suggestions"]',
-    'menuSuggestionTypes': '[data-menu="suggestionTypes"]'
+    'menuFeedback': '[data-menu="feedback"]',
+    'menuFeedbackTypes': '[data-menu="feedbackTypes"]'
 };
 
 const TOGGLE_TO_MODULE_MAP = {
@@ -70,8 +70,8 @@ const TOGGLE_TO_MODULE_MAP = {
     'togglePaletteColors': 'overlayContainer',
     'toggleSoundsMenu': 'overlayContainer',
     'toggleDeleteMenu': 'overlayContainer',
-    'toggleSuggestionMenu': 'overlayContainer',
-    'toggleSuggestionTypesMenu': 'overlayContainer'
+    'toggleFeedbackMenu': 'overlayContainer',
+    'toggleFeedbackTypesMenu': 'overlayContainer'
 };
 
 // ========== CENTRALIZED STATE ==========
@@ -408,7 +408,7 @@ function deactivateModuleWithAnimation(moduleName, source) {
         const overlayContainer = domCache.overlayContainer.module;
         if (overlayContainer) {
             // Encuentra CUALQUIER menú o submenú activo dentro del overlay
-          activeMenu = overlayContainer.querySelector('.menu-alarm.active, .menu-timer.active, .menu-worldClock.active, .menu-paletteColors.active, .menu-sounds.active, .menu-country.active, .menu-timeZone.active, .menu-calendar.active, .menu-timePicker.active, .menu-delete.active, .menu-suggestions.active, .menu-suggestion-types.active');
+          activeMenu = overlayContainer.querySelector('.menu-alarm.active, .menu-timer.active, .menu-worldClock.active, .menu-paletteColors.active, .menu-sounds.active, .menu-country.active, .menu-timeZone.active, .menu-calendar.active, .menu-timePicker.active, .menu-delete.active, .menu-feedback.active, .menu-feedback-types.active');
         }
     }
 
@@ -559,8 +559,8 @@ function getOverlayFromToggle(toggleName) {
         'togglePaletteColors': 'menuPaletteColors',
         'toggleSoundsMenu': 'menuSounds',
         'toggleDeleteMenu': 'menuDelete',
-        'toggleSuggestionMenu': 'menuSuggestions',
-        'toggleSuggestionTypesMenu': 'menuSuggestionTypes'
+        'toggleFeedbackMenu': 'menuFeedback',
+        'toggleFeedbackTypesMenu': 'menuFeedbackTypes'
     };
 
     return toggleToOverlayMap[toggleName] || null;
@@ -574,8 +574,8 @@ function getToggleFromOverlay(overlayName) {
         'menuPaletteColors': 'togglePaletteColors',
         'menuSounds': 'toggleSoundsMenu',
         'menuDelete': 'toggleDeleteMenu',
-        'menuSuggestions': 'toggleSuggestionMenu',
-        'menuSuggestionTypes': 'toggleSuggestionTypesMenu'
+        'menuFeedback': 'toggleFeedbackMenu',
+        'menuFeedbackTypes': 'toggleFeedbackTypesMenu'
     };
     return overlayToToggleMap[overlayName] || null;
 }

@@ -422,8 +422,8 @@ body {
 .menu-calendar,
 .menu-timePicker,
 .menu-delete,
-.menu-suggestions,
-.menu-suggestion-types {
+.menu-feedback,
+.menu-feedback-types {
     display: flex;
     flex-direction: column;
     width: 100%;
